@@ -1,0 +1,262 @@
+[
+  {
+    "slug": "mugs",
+    "name": "Mugs",
+    "singular": "mug",
+    "icon": "mug",
+    "tagline": "Tazas personalizadas para regalar todos los días",
+    "desc": "Cerámica de alta calidad, sublimado a color completo. Ideales para regalar, para tu oficina o como merchandising de marca.",
+    "priceFrom": "18.000",
+    "badges": [
+      "Sublimado full color",
+      "Apto microondas",
+      "Entrega en Bogotá"
+    ],
+    "products": [
+      {
+        "name": "Mug clásico 11oz",
+        "desc": "Cerámica blanca, sublimado full color en ambos lados.",
+        "price": "18.000",
+        "tag": "Más vendido"
+      },
+      {
+        "name": "Mug mágico cambia color",
+        "desc": "Negro al frío, revela tu diseño con líquido caliente.",
+        "price": "26.000",
+        "tag": "Especial"
+      },
+      {
+        "name": "Mug con asa de color",
+        "desc": "Blanco con asa e interior en color a elección.",
+        "price": "22.000",
+        "tag": null
+      },
+      {
+        "name": "Mug térmico con tapa",
+        "desc": "Acero inoxidable de doble pared, mantiene temperatura.",
+        "price": "38.000",
+        "tag": null
+      },
+      {
+        "name": "Set de 2 mugs pareja",
+        "desc": "Diseños complementarios, caja de regalo incluida.",
+        "price": "34.000",
+        "tag": "Para regalo"
+      },
+      {
+        "name": "Mug empresarial (x50)",
+        "desc": "Logo corporativo, precio especial por volumen.",
+        "price": "15.000",
+        "tag": "Por mayor"
+      }
+    ]
+  },
+  {
+    "slug": "tote-bags",
+    "name": "Tote Bags",
+    "singular": "tote bag",
+    "icon": "totebag",
+    "tagline": "Lleva tu diseño a todas partes",
+    "desc": "Bolsas de tela en algodón resistente, estampadas o bordadas con tu diseño favorito.",
+    "priceFrom": "20.000",
+    "badges": [
+      "Algodón resistente",
+      "Estampado o bordado",
+      "Eco-friendly"
+    ],
+    "products": [
+      {
+        "name": "Tote bag algodón crudo",
+        "desc": "Estampado a una tinta, tamaño estándar 35x40cm.",
+        "price": "20.000",
+        "tag": "Más vendido"
+      },
+      {
+        "name": "Tote bag full color",
+        "desc": "Sublimado de tu diseño completo en ambas caras.",
+        "price": "28.000",
+        "tag": null
+      },
+      {
+        "name": "Tote bag bordada",
+        "desc": "Bordado de alta durabilidad, acabado premium.",
+        "price": "34.000",
+        "tag": "Especial"
+      },
+      {
+        "name": "Tote bag reforzada con bolsillo",
+        "desc": "Bolsillo interior, base reforzada para más peso.",
+        "price": "30.000",
+        "tag": null
+      },
+      {
+        "name": "Set tote bag + mug",
+        "desc": "Combo de regalo con diseño a juego.",
+        "price": "44.000",
+        "tag": "Para regalo"
+      },
+      {
+        "name": "Tote bag empresarial (x50)",
+        "desc": "Logo corporativo, precio especial por volumen.",
+        "price": "17.000",
+        "tag": "Por mayor"
+      }
+    ]
+  },
+  {
+    "slug": "hoodies",
+    "name": "Hoodies",
+    "singular": "hoodie",
+    "icon": "hoodie",
+    "tagline": "Comodidad y estilo con tu diseño",
+    "desc": "Hoodies en algodón perchado, personalizadas con estampado DTF de alta durabilidad y colores vivos.",
+    "priceFrom": "75.000",
+    "badges": [
+      "Algodón perchado 320gr",
+      "Estampado DTF",
+      "Tallas S a XXL"
+    ],
+    "products": [
+      {
+        "name": "Hoodie unisex básica",
+        "desc": "Algodón perchado 320gr, estampado DTF.",
+        "price": "75.000",
+        "tag": "Más vendido"
+      },
+      {
+        "name": "Hoodie oversize",
+        "desc": "Corte amplio, tendencia streetwear.",
+        "price": "85.000",
+        "tag": "Tendencia"
+      },
+      {
+        "name": "Hoodie bordada",
+        "desc": "Logo o nombre bordado en pecho o espalda.",
+        "price": "92.000",
+        "tag": "Especial"
+      },
+      {
+        "name": "Hoodie pareja/familia",
+        "desc": "Diseños a juego, tallas niño a adulto.",
+        "price": "78.000",
+        "tag": "Para regalo"
+      },
+      {
+        "name": "Hoodie equipo/evento",
+        "desc": "Diseño único para grupos, mínimo 6 unidades.",
+        "price": "70.000",
+        "tag": null
+      },
+      {
+        "name": "Hoodie empresarial (x20)",
+        "desc": "Logo corporativo, precio especial por volumen.",
+        "price": "65.000",
+        "tag": "Por mayor"
+      }
+    ]
+  },
+  {
+    "slug": "camisetas",
+    "name": "Camisetas",
+    "singular": "camiseta",
+    "icon": "tshirt",
+    "tagline": "Tu mensaje, tu diseño, tu camiseta",
+    "desc": "Camisetas en algodón 100% o poliéster para sublimado, con estampado DTF de alta resolución.",
+    "priceFrom": "32.000",
+    "badges": [
+      "100% algodón",
+      "Estampado DTF",
+      "Ideal para grupos"
+    ],
+    "products": [
+      {
+        "name": "Camiseta algodón básica",
+        "desc": "100% algodón, estampado DTF un solo lado.",
+        "price": "32.000",
+        "tag": "Más vendido"
+      },
+      {
+        "name": "Camiseta sublimada full print",
+        "desc": "Diseño de borde a borde en poliéster.",
+        "price": "42.000",
+        "tag": "Especial"
+      },
+      {
+        "name": "Camiseta deportiva dry-fit",
+        "desc": "Tela transpirable, ideal para equipos deportivos.",
+        "price": "38.000",
+        "tag": null
+      },
+      {
+        "name": "Camiseta evento/grupo",
+        "desc": "Diseño único para grupos, mínimo 10 unidades.",
+        "price": "29.000",
+        "tag": "Por mayor"
+      },
+      {
+        "name": "Camiseta niño/bebé",
+        "desc": "Tallas desde 6 meses, algodón suave.",
+        "price": "26.000",
+        "tag": "Para regalo"
+      },
+      {
+        "name": "Camiseta empresarial (x30)",
+        "desc": "Logo corporativo, precio especial por volumen.",
+        "price": "24.000",
+        "tag": "Por mayor"
+      }
+    ]
+  },
+  {
+    "slug": "monederos",
+    "name": "Monederos",
+    "singular": "monedero",
+    "icon": "wallet",
+    "tagline": "Detalles pequeños, regalos memorables",
+    "desc": "Monederos y billeteras personalizadas, ideales como detalle de cumpleaños o souvenir de evento.",
+    "priceFrom": "15.000",
+    "badges": [
+      "Cuero sintético",
+      "Bordado disponible",
+      "Ideal para souvenirs"
+    ],
+    "products": [
+      {
+        "name": "Monedero plano estampado",
+        "desc": "Cuero sintético, cierre con cremallera.",
+        "price": "15.000",
+        "tag": "Más vendido"
+      },
+      {
+        "name": "Monedero con llavero",
+        "desc": "Combo a juego con llavero personalizado.",
+        "price": "19.000",
+        "tag": "Para regalo"
+      },
+      {
+        "name": "Billetera personalizada",
+        "desc": "Varios compartimentos, diseño full color.",
+        "price": "24.000",
+        "tag": "Especial"
+      },
+      {
+        "name": "Monedero souvenir evento (x20)",
+        "desc": "Detalle ideal para bodas, baby shower o grados.",
+        "price": "13.000",
+        "tag": "Por mayor"
+      },
+      {
+        "name": "Monedero bordado",
+        "desc": "Bordado de iniciales o nombre.",
+        "price": "21.000",
+        "tag": null
+      },
+      {
+        "name": "Monedero empresarial (x50)",
+        "desc": "Logo corporativo, precio especial por volumen.",
+        "price": "11.000",
+        "tag": "Por mayor"
+      }
+    ]
+  }
+]
