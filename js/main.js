@@ -74,15 +74,19 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form && typeof GLOOK !== "undefined") {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const name = form.querySelector("#f-name")?.value || "";
-      const phone = form.querySelector("#f-phone")?.value || "";
+      const name     = form.querySelector("#f-name")?.value || "";
+      const phone    = form.querySelector("#f-phone")?.value || "";
+      const email    = form.querySelector("#f-email")?.value || "";
+      const type     = form.querySelector("#f-type")?.value || "";
       const category = form.querySelector("#f-category")?.value || "";
-      const message = form.querySelector("#f-message")?.value || "";
+      const message  = form.querySelector("#f-message")?.value || "";
 
       const text = `Hola GLOOK! Soy ${name}.\n` +
-        (category ? `Me interesa: ${category}\n` : "") +
-        (phone ? `Mi teléfono: ${phone}\n` : "") +
-        (message ? `Mensaje: ${message}` : "");
+        (type     ? `Tipo de cliente: ${type}\n`      : "") +
+        (phone    ? `Teléfono: ${phone}\n`            : "") +
+        (email    ? `Correo: ${email}\n`              : "") +
+        (category ? `Me interesa: ${category}\n`      : "") +
+        (message  ? `Mensaje: ${message}`             : "");
 
       window.open(GLOOK.waLink(text), "_blank");
     });
