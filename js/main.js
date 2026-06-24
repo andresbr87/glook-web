@@ -69,24 +69,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* ---- Formulario de contacto -> envía a WhatsApp ---- */
+  /* ---- Formulario de contacto -> guarda en Firestore + abre WhatsApp ---- */
   const form = document.querySelector("#contact-form");
   if (form && typeof GLOOK !== "undefined") {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const name     = form.querySelector("#f-name")?.value || "";
-      const phone    = form.querySelector("#f-phone")?.value || "";
-      const email    = form.querySelector("#f-email")?.value || "";
-      const type     = form.querySelector("#f-type")?.value || "";
-      const category = form.querySelector("#f-category")?.value || "";
-      const message  = form.querySelector("#f-message")?.value || "";
 
-      const text = `Hola GLOOK! Soy ${name}.\n` +
-        (type     ? `Tipo de cliente: ${type}\n`      : "") +
-        (phone    ? `Teléfono: ${phone}\n`            : "") +
-        (email    ? `Correo: ${email}\n`              : "") +
-        (category ? `Me interesa: ${category}\n`      : "") +
-        (message  ? `Mensaje: ${message}`             : "");
+      const nombre    = form.querySelector("#f-name")?.value     || "";
+      const telefono  = form.querySelector("#f-phone")?.value    || "";
+      const email     = form.querySelector("#f-email")?.value    || "";
+      const tipo      = form.querySelector("#f-type")?.value     || "";
+      const categoria = form.querySelector("#f-category")?.value || "";
+      const mensaje   = form.querySelector("#f-message")?.value  || "";
+
+      // 1. Guardar lead en Firestore
+      if (typeof window.guardarLead === "function") {
+        await window.guardarLead({ nombre, telefono, email, tipo, categoria, mensaje });
+      }
+
+      // 2. Armar mensaje y abrir WhatsApp
+      const text = `Hola GLOOK! Soy ${nombre}.\n` +
+        (tipo      ? `Tipo de cliente: ${tipo}\n`     : "") +
+        (telefono  ? `Teléfono: ${telefono}\n`        : "") +
+        (email     ? `Correo: ${email}\n`             : "") +
+        (categoria ? `Me interesa: ${categoria}\n`    : "") +
+        (mensaje   ? `Mensaje: ${mensaje}`            : "");
 
       window.open(GLOOK.waLink(text), "_blank");
     });
