@@ -58,7 +58,7 @@
       <div class="hero-visual">
         <div class="hero-visual-card" style="padding:36px;">
           <span class="ph-icon" data-icon="mug" style="width:140px;height:140px;display:block;margin:0 auto 16px;"></span>
-          <div class="tagline">Desde $18.000</div>
+          <div class="tagline">Desde <span data-price-from="mugs">$13.000</span></div>
           <div class="tagline-sub">Precio según diseño y cantidad</div>
         </div>
       </div>
@@ -69,110 +69,13 @@
 <section class="section">
   <div class="container">
     <div class="product-toolbar">
-      <p class="product-count"><strong>6</strong> opciones disponibles en mugs</p>
+      <p class="product-count"><strong data-product-count></strong> opciones disponibles en mugs</p>
       <a href="#" data-wa data-wa-msg="Hola GLOOK! Quiero ver más opciones de mugs y cotizar un pedido." class="btn btn-outline btn-sm">
         <span data-icon="whatsapp" style="width:16px;height:16px;display:inline-flex;"></span> Preguntar por más opciones
       </a>
     </div>
 
-    <div class="product-grid">
-      <div class="product-card reveal">
-        <div class="product-media">
-          <span class="product-tag">Más vendido</span>
-          <span class="ph-icon" data-icon="mug"></span>
-        </div>
-        <div class="product-body">
-          <h3>Mug clásico 11oz</h3>
-          <p class="desc">Cerámica blanca, sublimado full color en ambos lados.</p>
-          <div class="product-foot">
-            <div class="product-price"><span class="from">Desde</span>$18.000</div>
-            <a href="#" data-wa data-wa-msg="Hola GLOOK! Quiero cotizar: Mug clásico 11oz (Mugs)." class="btn-wa-sm">
-              <span data-icon="whatsapp"></span> Cotizar
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="product-card reveal">
-        <div class="product-media">
-          <span class="product-tag">Especial</span>
-          <span class="ph-icon" data-icon="mug"></span>
-        </div>
-        <div class="product-body">
-          <h3>Mug mágico cambia color</h3>
-          <p class="desc">Negro al frío, revela tu diseño con líquido caliente.</p>
-          <div class="product-foot">
-            <div class="product-price"><span class="from">Desde</span>$26.000</div>
-            <a href="#" data-wa data-wa-msg="Hola GLOOK! Quiero cotizar: Mug mágico cambia color (Mugs)." class="btn-wa-sm">
-              <span data-icon="whatsapp"></span> Cotizar
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="product-card reveal">
-        <div class="product-media">
-          
-          <span class="ph-icon" data-icon="mug"></span>
-        </div>
-        <div class="product-body">
-          <h3>Mug con asa de color</h3>
-          <p class="desc">Blanco con asa e interior en color a elección.</p>
-          <div class="product-foot">
-            <div class="product-price"><span class="from">Desde</span>$22.000</div>
-            <a href="#" data-wa data-wa-msg="Hola GLOOK! Quiero cotizar: Mug con asa de color (Mugs)." class="btn-wa-sm">
-              <span data-icon="whatsapp"></span> Cotizar
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="product-card reveal">
-        <div class="product-media">
-          
-          <span class="ph-icon" data-icon="mug"></span>
-        </div>
-        <div class="product-body">
-          <h3>Mug térmico con tapa</h3>
-          <p class="desc">Acero inoxidable de doble pared, mantiene temperatura.</p>
-          <div class="product-foot">
-            <div class="product-price"><span class="from">Desde</span>$38.000</div>
-            <a href="#" data-wa data-wa-msg="Hola GLOOK! Quiero cotizar: Mug térmico con tapa (Mugs)." class="btn-wa-sm">
-              <span data-icon="whatsapp"></span> Cotizar
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="product-card reveal">
-        <div class="product-media">
-          <span class="product-tag">Para regalo</span>
-          <span class="ph-icon" data-icon="mug"></span>
-        </div>
-        <div class="product-body">
-          <h3>Set de 2 mugs pareja</h3>
-          <p class="desc">Diseños complementarios, caja de regalo incluida.</p>
-          <div class="product-foot">
-            <div class="product-price"><span class="from">Desde</span>$34.000</div>
-            <a href="#" data-wa data-wa-msg="Hola GLOOK! Quiero cotizar: Set de 2 mugs pareja (Mugs)." class="btn-wa-sm">
-              <span data-icon="whatsapp"></span> Cotizar
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="product-card reveal">
-        <div class="product-media">
-          <span class="product-tag">Por mayor</span>
-          <span class="ph-icon" data-icon="mug"></span>
-        </div>
-        <div class="product-body">
-          <h3>Mug empresarial (x50)</h3>
-          <p class="desc">Logo corporativo, precio especial por volumen.</p>
-          <div class="product-foot">
-            <div class="product-price"><span class="from">Desde</span>$15.000</div>
-            <a href="#" data-wa data-wa-msg="Hola GLOOK! Quiero cotizar: Mug empresarial (x50) (Mugs)." class="btn-wa-sm">
-              <span data-icon="whatsapp"></span> Cotizar
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="product-grid" data-products="mugs" data-base="../"></div>
 
     <div class="info-band">
       <div class="info-band-card reveal">
@@ -263,7 +166,7 @@
       <div class="footer-col">
         <h5>Contacto</h5>
         <ul>
-          <li><a href="#" data-wa data-wa-msg="Hola GLOOK!">+57 322 975 6176</a></li>
+          <li><a href="tel:+573054063666">+57 305 406 3666</a></li>
           <li><a href="mailto:andbol@glook.com.co">andbol@glook.com.co</a></li>
           <li><a href="mailto:steher@glook.com.co">steher@glook.com.co</a></li>
           <li><a href="#">Kennedy, Bogotá</a></li>
@@ -280,6 +183,7 @@
 <a href="#" data-wa data-wa-msg="Hola GLOOK! Quiero hacer un pedido." class="wa-float" aria-label="Escríbenos por WhatsApp" data-icon="whatsapp"></a>
 
 <script src="../js/data.js"></script>
+<script src="../js/catalog.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>

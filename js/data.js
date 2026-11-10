@@ -17,6 +17,19 @@ const GLOOK = {
     return message ? `${base}?text=${encodeURIComponent(message)}` : base;
   },
 
+  /* ---------------------------------------------------------------
+     CATÁLOGO — fuente única de productos y precios.
+     Cada producto:
+       name   Nombre visible
+       short  Descripción corta (tarjeta)
+       specs  Descripción larga (lista en la ventana de detalle)
+       note   Nota opcional al final del detalle
+       price  Precio "desde" en pesos (número, sin puntos)
+       unit   Opcional, ej. "c/u" para precios por unidad en paquetes
+       tag    Etiqueta opcional (null = sin etiqueta)
+       image  Foto opcional (ruta desde la raíz, ej. "images/hoodie.png").
+              Si no hay foto se muestra el ícono de la categoría.
+     --------------------------------------------------------------- */
   categories: [
     {
       slug: "mugs",
@@ -25,31 +38,32 @@ const GLOOK = {
       tagline: "Tazas personalizadas para regalar todos los días",
       desc: "Cerámica de alta calidad, sublimado a color completo. Ideal para regalos, detalles corporativos y merchandising.",
       icon: "mug",
-      priceFrom: "18.000",
       products: [
-        { name: "Mug clásico 11oz", desc: "Cerámica blanca, sublimado full color en ambos lados.", price: "18.000" },
-        { name: "Mug mágico cambia color", desc: "Negro al frío, revela tu diseño con líquido caliente.", price: "26.000" },
-        { name: "Mug con asa de color", desc: "Blanco con asa e interior en color a elección.", price: "22.000" },
-        { name: "Mug térmico con tapa", desc: "Acero inoxidable de doble pared, mantiene temperatura.", price: "38.000" },
-        { name: "Set de 2 mugs pareja", desc: "Diseños complementarios, caja de regalo incluida.", price: "34.000" },
-        { name: "Mug empresarial (x50)", desc: "Logo corporativo, precio especial por volumen.", price: "15.000" }
-      ]
-    },
-    {
-      slug: "termos",
-      name: "Termos",
-      singular: "termo",
-      tagline: "Hidratación con tu estilo, a donde vayas",
-      desc: "Termos en acero inoxidable con grabado o sticker personalizado, perfectos para el día a día o como regalo corporativo.",
-      icon: "thermos",
-      priceFrom: "32.000",
-      products: [
-        { name: "Termo deportivo 500ml", desc: "Acero inoxidable, doble pared, mantiene frío/calor 12h.", price: "32.000" },
-        { name: "Termo con pitillo 750ml", desc: "Ideal para hidratación durante el ejercicio.", price: "38.000" },
-        { name: "Termo café para llevar", desc: "Tapa hermética antiderrames, agarre ergonómico.", price: "35.000" },
-        { name: "Termo grabado láser", desc: "Grabado permanente de nombre o logo.", price: "42.000" },
-        { name: "Termo infantil 350ml", desc: "Diseños divertidos, asa segura para niños.", price: "28.000" },
-        { name: "Termo empresarial (x50)", desc: "Logo corporativo, precio especial por volumen.", price: "27.000" }
+        {
+          name: "Mug blanco 11oz",
+          short: "Mug de cerámica personalizado.",
+          specs: ["Capacidad: 11 onzas", "Material: cerámica", "Alto: 9,5 cm", "Diámetro: 8 cm", "Área de sublimación: 20 x 9 cm"],
+          price: 16000, tag: "Más vendido"
+        },
+        {
+          name: "Mug mágico negro 11oz",
+          short: "Negro al frío, revela tu diseño con líquido caliente.",
+          specs: ["Capacidad: 11 onzas", "Material: cerámica", "Alto: 9,5 cm", "Diámetro: 8 cm", "Área de sublimación: 20 x 9 cm"],
+          price: 22000, tag: "Cambia color"
+        },
+        {
+          name: "Mug color interno 11oz",
+          short: "Blanco con asa e interior en color.",
+          specs: ["Capacidad: 11 onzas", "Material: cerámica", "Alto: 9,5 cm", "Diámetro: 8 cm", "Área de sublimación: 20 x 9 cm"],
+          note: "Pregunta por la disponibilidad de colores.",
+          price: 18000, tag: null
+        },
+        {
+          name: "Mug blanco por docena (x12)",
+          short: "Mug de cerámica personalizado.",
+          specs: ["Capacidad: 11 onzas", "Material: cerámica", "Alto: 9,5 cm", "Diámetro: 8 cm", "Área de sublimación: 20 x 9 cm"],
+          price: 13000, unit: "c/u", tag: "Por mayor"
+        }
       ]
     },
     {
@@ -59,31 +73,51 @@ const GLOOK = {
       tagline: "Lleva tu diseño a todas partes",
       desc: "Bolsas de tela en algodón resistente, estampadas o bordadas con tu diseño favorito.",
       icon: "totebag",
-      priceFrom: "20.000",
-      products: [
-        { name: "Tote bag algodón crudo", desc: "Estampado a una tinta, tamaño estándar 35x40cm.", price: "20.000" },
-        { name: "Tote bag full color", desc: "Sublimado de tu diseño completo en ambas caras.", price: "28.000" },
-        { name: "Tote bag bordada", desc: "Bordado de alta durabilidad, acabado premium.", price: "34.000" },
-        { name: "Tote bag reforzada con bolsillo", desc: "Bolsillo interior, base reforzada para más peso.", price: "30.000" },
-        { name: "Set tote bag + mug", desc: "Combo de regalo con diseño a juego.", price: "44.000" },
-        { name: "Tote bag empresarial (x50)", desc: "Logo corporativo, precio especial por volumen.", price: "17.000" }
-      ]
+      products: [] // Pendiente: datos reales
     },
     {
       slug: "hoodies",
       name: "Hoodies",
       singular: "hoodie",
       tagline: "Comodidad y estilo con tu diseño",
-      desc: "Hoodies en algodón perchado, personalizadas con estampado DTF de alta durabilidad y colores vivos.",
+      desc: "Hoodies personalizados con estampado DTF o vinilo, en algodón y mezcla algodón-poliéster.",
       icon: "hoodie",
-      priceFrom: "75.000",
       products: [
-        { name: "Hoodie unisex básica", desc: "Algodón perchado 320gr, estampado DTF.", price: "75.000" },
-        { name: "Hoodie oversize", desc: "Corte amplio, tendencia streetwear.", price: "85.000" },
-        { name: "Hoodie bordada", desc: "Logo o nombre bordado en pecho o espalda.", price: "92.000" },
-        { name: "Hoodie pareja/familia", desc: "Diseños a juego, tallas niño a adulto.", price: "78.000" },
-        { name: "Hoodie equipo/evento", desc: "Diseño único para grupos, mínimo 6 unidades.", price: "70.000" },
-        { name: "Hoodie empresarial (x20)", desc: "Logo corporativo, precio especial por volumen.", price: "65.000" }
+        {
+          name: "Hoodie unisex con capota",
+          short: "Algodón-poliéster 240 gr, personalizado DTF o vinilo.",
+          specs: ["Tela: 50 % algodón – 50 % poliéster", "Gramaje: 240 gramos", "Tejido suave, resistente y confortable", "Excelente estabilidad dimensional", "Tallas de la S a la XL"],
+          note: "Pregunta por la disponibilidad de colores.",
+          price: 125000, tag: "Más vendido", image: "images/hoodie.png"
+        },
+        {
+          name: "Hoodie unisex",
+          short: "Algodón-poliéster 240 gr, personalizado DTF o vinilo.",
+          specs: ["Tela: 50 % algodón – 50 % poliéster", "Gramaje: 240 gramos", "Cuello: redondo", "Tejido suave, resistente y confortable", "Excelente estabilidad dimensional", "Tallas de la S a la XL"],
+          note: "Pregunta por la disponibilidad de colores.",
+          price: 105000, tag: "Cuello redondo", image: "images/hoodie.png"
+        },
+        {
+          name: "Hoodie oversize premium con capucha",
+          short: "Algodón 350 gr con capucha, personalizado DTF o vinilo.",
+          specs: ["Tela: 100 % algodón", "Gramaje: 350 gramos", "Buzo de manga larga con capucha, cordón y bolsillo canguro", "Tallas de la S a la XL"],
+          note: "Pregunta por la disponibilidad de colores.",
+          price: 145000, tag: "Tendencia", image: "images/hoodie.png"
+        },
+        {
+          name: "Hoodie oversize premium sin capucha",
+          short: "Algodón 350 gr cuello redondo, personalizado DTF o vinilo.",
+          specs: ["Tela: 100 % algodón", "Gramaje: 350 gramos", "Buzo de manga larga, cuello redondo, sin capucha", "Tallas de la S a la XL"],
+          note: "Pregunta por la disponibilidad de colores.",
+          price: 130000, tag: "Cuello redondo", image: "images/hoodie.png"
+        },
+        {
+          name: "Hoodie por seis (x6)",
+          short: "Algodón-poliéster 240 gr, personalizado DTF o vinilo.",
+          specs: ["Tela: 50 % algodón – 50 % poliéster", "Gramaje: 240 gramos", "Tejido suave, resistente y confortable", "Excelente estabilidad dimensional", "Tallas de la S a la XL"],
+          note: "Pregunta por la disponibilidad de colores.",
+          price: 98000, unit: "c/u", tag: "Por mayor", image: "images/hoodie.png"
+        }
       ]
     },
     {
@@ -93,15 +127,7 @@ const GLOOK = {
       tagline: "Tu mensaje, tu diseño, tu camiseta",
       desc: "Camisetas en algodón 100% o poliéster para sublimado, con estampado DTF de alta resolución.",
       icon: "tshirt",
-      priceFrom: "32.000",
-      products: [
-        { name: "Camiseta algodón básica", desc: "100% algodón, estampado DTF un solo lado.", price: "32.000" },
-        { name: "Camiseta sublimada full print", desc: "Diseño de borde a borde en poliéster.", price: "42.000" },
-        { name: "Camiseta deportiva dry-fit", desc: "Tela transpirable, ideal para equipos deportivos.", price: "38.000" },
-        { name: "Camiseta evento/grupo", desc: "Diseño único para grupos, mínimo 10 unidades.", price: "29.000" },
-        { name: "Camiseta niño/bebé", desc: "Tallas desde 6 meses, algodón suave.", price: "26.000" },
-        { name: "Camiseta empresarial (x30)", desc: "Logo corporativo, precio especial por volumen.", price: "24.000" }
-      ]
+      products: [] // Pendiente: datos reales
     },
     {
       slug: "monederos",
@@ -110,27 +136,30 @@ const GLOOK = {
       tagline: "Detalles pequeños, regalos memorables",
       desc: "Monederos y billeteras personalizadas, ideales como detalle de cumpleaños o souvenir de evento.",
       icon: "wallet",
-      priceFrom: "15.000",
-      products: [
-        { name: "Monedero plano estampado", desc: "Cuero sintético, cierre con cremallera.", price: "15.000" },
-        { name: "Monedero con llavero", desc: "Combo a juego con llavero personalizado.", price: "19.000" },
-        { name: "Billetera personalizada", desc: "Varios compartimentos, diseño full color.", price: "24.000" },
-        { name: "Monedero souvenir evento (x20)", desc: "Detalle ideal para bodas, baby shower o grados.", price: "13.000" },
-        { name: "Monedero bordado", desc: "Bordado de iniciales o nombre.", price: "21.000" },
-        { name: "Monedero empresarial (x50)", desc: "Logo corporativo, precio especial por volumen.", price: "11.000" }
-      ]
+      products: [] // Pendiente: datos reales
     }
   ],
 
   getCategory(slug) {
     return this.categories.find(c => c.slug === slug);
+  },
+
+  /** Precio mínimo de la categoría (para "Desde $X"). */
+  priceFrom(slug) {
+    const c = this.getCategory(slug);
+    const prices = (c?.products || []).map(p => p.price).filter(Boolean);
+    return prices.length ? Math.min(...prices) : null;
+  },
+
+  /** 16000 -> "16.000" */
+  money(n) {
+    return Number(n).toLocaleString("es-CO", { maximumFractionDigits: 0 });
   }
 };
 
 /* ===================== Icon library (inline SVG, stroke style) ===================== */
 const ICONS = {
   mug: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 22h30v24a8 8 0 0 1-8 8H22a8 8 0 0 1-8-8V22z" stroke="url(#g1)" stroke-width="3" stroke-linejoin="round"/><path d="M44 28h4a6 6 0 0 1 0 12h-4" stroke="url(#g1)" stroke-width="3"/><path d="M22 14c0-2 2-3 2-5M30 14c0-2 2-3 2-5M38 14c0-2 2-3 2-5" stroke="url(#g1)" stroke-width="2.5" stroke-linecap="round"/><defs><linearGradient id="g1" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#2575FC"/><stop offset="1" stop-color="#6A11CB"/></linearGradient></defs></svg>`,
-  thermos: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="8" width="24" height="10" rx="2" stroke="url(#g2)" stroke-width="3"/><path d="M18 18h28l-3 38a4 4 0 0 1-4 4H25a4 4 0 0 1-4-4l-3-38z" stroke="url(#g2)" stroke-width="3" stroke-linejoin="round"/><path d="M22 30h20" stroke="url(#g2)" stroke-width="2.5"/><defs><linearGradient id="g2" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#2575FC"/><stop offset="1" stop-color="#6A11CB"/></linearGradient></defs></svg>`,
   totebag: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22h40l-3 34a4 4 0 0 1-4 4H19a4 4 0 0 1-4-4l-3-34z" stroke="url(#g3)" stroke-width="3" stroke-linejoin="round"/><path d="M22 22v-4a10 10 0 0 1 20 0v4" stroke="url(#g3)" stroke-width="3"/><defs><linearGradient id="g3" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#2575FC"/><stop offset="1" stop-color="#6A11CB"/></linearGradient></defs></svg>`,
   hoodie: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 8c0 5 3.5 8 8 8s8-3 8-8" stroke="url(#g4)" stroke-width="3" stroke-linecap="round"/><path d="M24 8 8 17l4 11 7-3.5V54a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V24.5L52 28l4-11L40 8" stroke="url(#g4)" stroke-width="3" stroke-linejoin="round"/><path d="M27 16c0 3 2 5 5 5s5-2 5-5" stroke="url(#g4)" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="30" r="2" fill="url(#g4)"/><path d="M32 32v8" stroke="url(#g4)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g4" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#2575FC"/><stop offset="1" stop-color="#6A11CB"/></linearGradient></defs></svg>`,
   tshirt: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 10 8 18l4 10 6-3v29a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4V25l6 3 4-10-14-8c-2 4-6 6-10 6s-8-2-10-6z" stroke="url(#g5)" stroke-width="3" stroke-linejoin="round"/><defs><linearGradient id="g5" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#2575FC"/><stop offset="1" stop-color="#6A11CB"/></linearGradient></defs></svg>`,
